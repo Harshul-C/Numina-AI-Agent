@@ -1,0 +1,34 @@
+{
+  "name": "Numina AI Agent",
+  "description": "AI-powered audit tool for QuickBooks data analysis and rule execution",
+  "repository": "https://github.com/your-username/numina-ai-agent",
+  "logo": "https://via.placeholder.com/128x128.png?text=Numina",
+  "keywords": ["nodejs", "react", "ai", "audit", "quickbooks", "gemini"],
+  "image": "heroku/nodejs",
+  "stack": "heroku-22",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [],
+  "env": {
+    "NODE_ENV": {
+      "description": "Node environment",
+      "value": "production"
+    },
+    "GEMINI_API_KEY": {
+      "description": "Google Gemini AI API Key - Get from https://makersuite.google.com/app/apikey",
+      "required": true
+    }
+  },
+  "scripts": {
+    "postdeploy": "echo 'Deployment completed successfully!'"
+  }
+}
